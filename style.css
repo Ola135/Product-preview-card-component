@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.text-box {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+h6.prod-category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+h2.prod-name {
+    font-family: 'Fraunces', serif;
+    font-size: 38px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+p.prod-info {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5em;
+
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+p.current-price {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 35px;
+    padding-right: 25px;
+}
+
+p.old-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button.btn {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 15px 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: hsl(158, 36%, 19%);
+}
+
+button.btn img {
+    padding-right: 8px;   
+     
+}
+
+@media only screen and (max-width: 628px){
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .text-box{
+        display: block;   
+    }
+
+    h6.prod-category, h2.prod-name, p.prod-info, .price {
+        padding-bottom: 23px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .img img{
+        max-height: 290px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .text-box{
+        padding: 21px;
+        
+    }
+
+    h6.prod-category, h2.prod-name, p.prod-info, .price {
+        padding-bottom: 15px;
+    }
+
+    h2.prod-name {
+        font-size: 32px;
+    }
+
+    p.current-price {
+        font-size: 32px;
+    }
+
+    button.btn {
+        padding: 13px 0;
+    }
+}
