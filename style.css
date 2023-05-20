@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
 
-/* font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif; */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
 }
 
 
@@ -47,11 +49,11 @@ body{
     
 }
 
-h6.prod-category {
+h1.prod-category {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 13px;
-    color: hsl(228, 12%, 48%);
+    color: var(--dark-grayish-blue);
     font-weight: 500;
 }
 
@@ -63,7 +65,7 @@ h2.prod-name {
 }
 
 p.prod-info {
-    color: hsl(228, 12%, 48%);
+    color: var(--dark-grayish-blue);
     line-height: 1.6em;
     font-size: 16px;
 
@@ -76,20 +78,20 @@ p.prod-info {
 
 p.current-price {
     font-family: 'Fraunces', serif;
-    color: hsl(158, 36%, 37%);
+    color: var(--dark-cyan);
     font-size: 35px;
     padding-right: 25px;
 }
 
 p.old-price {
-    color: hsl(228, 12%, 48%);
+    color: var(--dark-grayish-blue);
     text-decoration: line-through;
 }
 
 button.btn {
     display: flex;
     justify-content: center;
-    background-color: hsl(158, 36%, 37%);
+    background-color: var(--dark-cyan);
     border: none;
     padding: 15px 0;
     border-radius: 8px;
@@ -125,7 +127,7 @@ button.btn img {
         display: block;   
     }
 
-    h6.prod-category, h2.prod-name, p.prod-info, .price {
+    h1.prod-category, h2.prod-name, p.prod-info, .price {
         padding-bottom: 23px;
     }
 }
@@ -145,7 +147,7 @@ button.btn img {
         
     }
 
-    h6.prod-category, h2.prod-name, p.prod-info, .price {
+    h1.prod-category, h2.prod-name, p.prod-info, .price {
         padding-bottom: 15px;
     }
 
